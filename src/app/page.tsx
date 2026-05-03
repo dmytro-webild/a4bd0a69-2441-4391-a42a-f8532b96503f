@@ -7,12 +7,11 @@ import FeatureCardSix from '@/components/sections/feature/FeatureCardSix';
 import FooterBaseCard from '@/components/sections/footer/FooterBaseCard';
 import HeroBillboardTestimonial from '@/components/sections/hero/HeroBillboardTestimonial';
 import NavbarLayoutFloatingOverlay from '@/components/navbar/NavbarLayoutFloatingOverlay/NavbarLayoutFloatingOverlay';
-import PricingCardOne from '@/components/sections/pricing/PricingCardOne';
 import ProductCardThree from '@/components/sections/product/ProductCardThree';
 import SocialProofOne from '@/components/sections/socialProof/SocialProofOne';
 import TestimonialAboutCard from '@/components/sections/about/TestimonialAboutCard';
 import TestimonialCardTen from '@/components/sections/testimonial/TestimonialCardTen';
-import { Heart, Star, Users, MapPin, Phone } from "lucide-react";
+import { Heart, Star } from "lucide-react";
 
 export default function LandingPage() {
   return (
@@ -52,6 +51,8 @@ export default function LandingPage() {
       buttons={[{ text: "Ontdek het menu", href: "#menu" }, { text: "Reserveer tafel", href: "#contact" }]}
       avatars={[{ src: "https://img.b2bpic.net/free-photo/cheerful-woman-posing-restaurant_23-2148766952.jpg", alt: "Guest" }]}
       avatarText="1000+ Gelukkige gasten"
+      testimonials={[]}
+      useInvertedBackground={false}
     />
   </div>
 
@@ -64,6 +65,7 @@ export default function LandingPage() {
       subdescription="Onze chefs werken uitsluitend met dagverse ingrediënten van de hoogste kwaliteit om elke gast een memorabel diner te bezorgen."
       icon={Heart}
       imageSrc="https://img.b2bpic.net/free-photo/chef-preparing-gourmet-dish_23-2148766960.jpg"
+      useInvertedBackground={false}
     />
   </div>
 
@@ -71,6 +73,8 @@ export default function LandingPage() {
       <FeatureCardSix
       title="Signatuur Ervaringen"
       textboxLayout="split"
+      description="Onze unieke service opties"
+      useInvertedBackground={false}
       features={[
         { title: "Private Dining", description: "Intieme settings voor besloten groepen.", imageSrc: "https://img.b2bpic.net/free-photo/private-dining-setup_23-2148766970.jpg" },
         { title: "Chef's Table", description: "Kijk mee over de schouder van onze meesterchefs.", imageSrc: "https://img.b2bpic.net/free-photo/chef-table-interaction_23-2148766980.jpg" },
@@ -86,6 +90,7 @@ export default function LandingPage() {
       textboxLayout="default"
       title="Onze Signatuur Gerechten"
       description="Een zorgvuldig samengestelde kaart van wereldklasse."
+      useInvertedBackground={false}
       products={[
         { id: "1", name: "Truffel Risotto", price: "€28.00", imageSrc: "https://img.b2bpic.net/free-photo/truffle-risotto_23-2148767000.jpg" },
         { id: "2", name: "Dry Aged Entrecote", price: "€38.00", imageSrc: "https://img.b2bpic.net/free-photo/dry-aged-steak_23-2148767010.jpg" },
@@ -97,7 +102,9 @@ export default function LandingPage() {
   <div id="testimonials" data-section="testimonials">
       <TestimonialCardTen
       title="Wat onze gasten zeggen"
+      description="Ervaringen van onze gasten"
       textboxLayout="split"
+      useInvertedBackground={false}
       testimonials={[
         { id: "t1", title: "Fenomenaal", quote: "De beste dinerervaring in jaren.", name: "Alexander B.", role: "Fijnproever" },
         { id: "t2", title: "Luxe sfeer", quote: "Een perfecte ambiance voor onze jubileumviering.", name: "Marieke P.", role: "Gast" }
@@ -108,6 +115,9 @@ export default function LandingPage() {
   <div id="socialproof" data-section="socialproof">
       <SocialProofOne
       title="Gerenommeerde partners"
+      description="Erkende kwaliteit"
+      textboxLayout="default"
+      useInvertedBackground={false}
       names={["Michelin Guide", "Gault&Millau", "Fine Dining Club", "Luxury Living"]}
     />
   </div>
@@ -117,6 +127,7 @@ export default function LandingPage() {
       text="Bent u klaar voor een onvergetelijke avond bij Puspita? Wees er snel bij, onze tafels voor het weekend zijn snel volgeboekt."
       background={{ variant: "rotated-rays-static" }}
       buttons={[{ text: "Reserveer nu", href: "#" }]}
+      useInvertedBackground={false}
     />
   </div>
 
